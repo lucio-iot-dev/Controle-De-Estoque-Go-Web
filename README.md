@@ -35,7 +35,7 @@ Este projeto consiste em criar atravez de uma pagina web um controle de estoque 
 
 ## :memo: Licença
 
-Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](https://github.com/lucio-iot-dev/Monitorador-de-Sites-Go/blob/main/LICENSE) para mais detalhes.
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](https://github.com/lucio-iot-dev/Controle-De-Estoque-Go-Web/blob/main/LICENSE) para mais detalhes.
 
 
 Dev: Lúcio do Nascimento.
