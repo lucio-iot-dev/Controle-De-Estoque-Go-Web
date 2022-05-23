@@ -18,7 +18,7 @@
 <br>
 
 <p align="center">
-  <img alt="Golang" src="https://github.com/lucio-iot-dev/Monitorador-de-Sites-Go/blob/main/Fotos/Golang%20readme.jpeg" width="30%">
+  <img alt="Golang" src="https://github.com/lucio-iot-dev/Controle-De-Estoque-Go-Web/blob/main/fotos%20readme/foto%20readme%202.jpeg" width="30%">
 </p>
 
 ## 🚀 Tecnologias
