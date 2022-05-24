@@ -42,8 +42,9 @@
                 <td>{{.Descricao}}</td>
                 <td>{{.Preco}}</td>
                 <td>{{.Quantidade}}</td>
-                <td><a href="/delete?id={{.Id}}" class="btn btn-danger">Deletar<a></td>
-              </tr>
+                <!-- <td><a href="/delete?id={{.Id}}" class="btn btn-danger">Deletar<a></td>  -->
+                  <!-- Atravez da forma de cima conseguiremos deletar o produto somente com o código go ,mas ficamos sem uma verificação de confirmação para não deletar de forma acidental. Por isso utilizei o código javascript na linha 47 com um script na linha 59. -->
+                <td><button onclick="onDelete('{{.Id}}')" class="btn btn-danger">Deletar</button></td>
               {{end}}
             </tbody>
           </table>
@@ -54,5 +55,13 @@
       </div>
     </div>
   </body>
+  <script>
+    function onDelete(id) {
+      let resposta = confirm("Tem certeza que deseja deletar esse produto?")
+      if (resposta) {
+        window.location = "/delete?id=" + id
+      }
+    }
+  </script>
 </html>
 {{end}}
