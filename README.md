@@ -16,10 +16,11 @@
 </p>
 
 <br>
-
 <p align="center">
-  <img alt="Golang" src="https://github.com/lucio-iot-dev/Controle-De-Estoque-Go-Web/blob/main/fotos%20readme/foto%20readme%202.jpeg" width="30%">
+  <img alt="Golang" src="https://github.com/lucio-iot-dev/Controle-De-Estoque-Go-Web/blob/main/fotos%20readme/foto%20readme.jpeg" width="70%">
 </p>
+
+
 
 ## 🚀 Tecnologias
 
@@ -29,9 +30,17 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - HTML
 - Banco de dados Postgres
 
+<p align="center">
+  <img alt="Golang" src="https://github.com/lucio-iot-dev/Controle-De-Estoque-Go-Web/blob/main/fotos%20readme/foto%20readme%201.jpeg" width="30%">
+</p>
+
 ## 💻 Descrição
 
 Este projeto consiste em criar atravez de uma pagina web um controle de estoque com cadastro de produtos com nome, descrição, preço e quantidade para fins de estudo e treinar novas funcionalidades da linguagem Golang
+
+<p align="center">
+  <img alt="Golang" src="https://github.com/lucio-iot-dev/Controle-De-Estoque-Go-Web/blob/main/fotos%20readme/foto%20readme%202.jpeg" width="30%">
+</p>
 
 ## :memo: Licença
 
