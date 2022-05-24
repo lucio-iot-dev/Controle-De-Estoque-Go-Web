@@ -33,7 +33,7 @@ func BuscaTodosOsProdutos() []Produto {
 			panic(err.Error())
 		}
 
-    p.Id = id
+		p.Id = id
 		p.Nome = nome
 		p.Descricao = descricao
 		p.Preco = preco
@@ -55,13 +55,13 @@ func CriaNovoProduto(nome, descricao string, preco float64, quantidade int) {
 	if err != nil {
 		panic(err.Error())
 	}
-	insereDadosNoBanco.Exec(nome, descricao, preco,quantidade)
+	insereDadosNoBanco.Exec(nome, descricao, preco, quantidade)
 
 	defer db.Close()
 }
 
 func DeletaProduto(id string) {
-  db := db.ConectaComBancoDeDados()
+	db := db.ConectaComBancoDeDados()
 
 	deletarOProduto, err := db.Prepare("delete from produtos where id=$1")
 	if err != nil {
@@ -70,4 +70,32 @@ func DeletaProduto(id string) {
 
 	deletarOProduto.Exec(id)
 	defer db.Close()
+}
+
+func EditaProduto(id string) Produto {
+	db := db.ConectaComBancoDeDados()
+
+	produtoDoBanco, err := db.Query("select * from produtos where id=$1", id)
+	if err != nil {
+		panic(err.Error())
+	}
+
+	produtoParaAtualizar := Produto{}
+
+	for produtoDoBanco.Next() {
+		var id, quantidade int
+		var nome, descricao string
+		var preco float64
+
+		err = produtoDoBanco.Scan(&id, &nome, &descricao, &preco, &quantidade)
+		if err != nil {
+			panic(err.Error())
+		}
+		produtoParaAtualizar.Nome = nome
+		produtoParaAtualizar.Descricao = descricao
+		produtoParaAtualizar.Preco = preco
+		produtoParaAtualizar.Quantidade = quantidade
+	}
+	defer db.Close()
+	return produtoParaAtualizar
 }
